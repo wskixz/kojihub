@@ -1,0 +1,40 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Koji",
+    LoadingTitle = "",
+    LoadingSubtitle = "",
+    ConfigurationSaving = {
+        Enabled = False,
+        FolderName = "ok2",
+        FileName = "ok1"
+    },
+    KeySystem = true,
+    KeySettings = {
+        Title = "Key System",
+        Subtitle = "Enter Key",
+        Note = "Ur gay",
+        SaveKey = false,
+        Key = "kojihub"
+    }
+})
+local Tab = Window:CreateTab("Main", 4483362458)
+local Section = Tab:CreateSection("Miscellaneous")
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto-Parry",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+    end,
+})
+
+local Slider = Tab:CreateSlider({
+    Name = "Auto-Parry Hitrate",
+    Range = {0, 100},
+    Increment = 10,
+    Suffix = "Parryrate",
+    CurrentValue = 10,
+    Flag = "Slider1",
+    Callback = function(Value)
+    end,
+})
